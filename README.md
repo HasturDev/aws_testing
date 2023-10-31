@@ -7,15 +7,10 @@ in order to use this file you should simply need to do these actions
 ```bash
 docker build -t localstack-python-boto3 .
 ```
-3. Either run
+3. You can also override the instance ID so that you can implement your own
 ```bash
  docker run -it -e INSTANCE_ID=ANOTHER_INSTANCE_ID localstack-python-boto3
 ```
- in order to override the instance_id with your own or modify the instance ID to a default you want and run
- or run
- ```bash
- docker run -it localstack-python-boto3
- ```
 
 Once this is done the file should start up and run an instance of localstack and allow you to test someone. You'll need to add your own testing files which will require you to run the
 ```bash
