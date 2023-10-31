@@ -1,0 +1,18 @@
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim
+
+# Install LocalStack
+RUN apt-get update && apt-get install -y \
+    curl \
+    unzip \
+    && rm -rf /var/lib/apt/lists/*
+RUN pip install localstack
+
+# Install Boto3
+RUN pip install boto3
+
+# Add a startup script
+COPY start.sh
+RUN chmod +x /start.sh
+
+ENTRYPOINT ["/start.sh"]
