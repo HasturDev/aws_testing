@@ -3,7 +3,10 @@ This is a small test that I am writing to determine a persons AWS capabilities
 
 in order to use this file you should simply need to do these actions
 1. Have docker, boto3, localstack, and Python 3.9 or higher installed on your system
-2. docker build -t localstack-python-boto3 .
+2. 
+```bash
+docker build -t localstack-python-boto3 .
+```
 3. Either run
 ```bash
  docker run -it -e INSTANCE_ID=ANOTHER_INSTANCE_ID localstack-python-boto3
