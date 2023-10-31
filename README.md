@@ -11,7 +11,8 @@ docker build -t localstack-python-boto3 .
 ```bash
  docker run -it -e INSTANCE_ID=ANOTHER_INSTANCE_ID localstack-python-boto3
 ```
- in order to override the instance_id with your own or modify the instance ID to a default you want and run 
+ in order to override the instance_id with your own or modify the instance ID to a default you want and run
+ or run
  ```bash
  docker run -it localstack-python-boto3
  ```
